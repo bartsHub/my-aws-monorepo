@@ -12,5 +12,5 @@ new PipelineStack(app, 'InfrastructurePipelineStack', {
   env,
   repo: 'bartsHub/my-aws-monorepo',
   branch: 'main',
-  connectionArn: 'arn:aws:codeconnections:us-east-1:598096477811:connection/6a75d8ac-96fc-4ca0-bee5-93123b530eef',
+  connectionArn: 'arn:aws:codeconnections:us-east-1:598096477811:connection/de2dc0cf-2bfb-4ddc-996e-c1d35355cd2c',
 });
