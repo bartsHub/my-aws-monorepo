@@ -26,7 +26,13 @@ export class PipelineStack extends cdk.Stack {
         input: CodePipelineSource.connection(props.repo, props.branch, {
           connectionArn: props.connectionArn,
         }),
-        commands: ['cd infrastructure', 'npm ci', 'npm test', 'npx cdk synth'],
+        commands: [
+          'python3 -m unittest discover -s service/hello_world',
+          'cd infrastructure',
+          'npm ci',
+          'npm test',
+          'npx cdk synth',
+        ],
         primaryOutputDirectory: 'infrastructure/cdk.out',
       }),
       codeBuildDefaults: {
